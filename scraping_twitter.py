@@ -1,25 +1,10 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[ ]:
-
-
-get_ipython().system('git clone https://github.com/twintproject/twint.git')
-get_ipython().run_line_magic('cd', 'twint')
-get_ipython().system('pip3 install . -r requirements.txt')
-
-
-# In[ ]:
-
-
-get_ipython().run_line_magic('cd', 'twint')
-
-
-# In[ ]:
-
-
 import twint
 import os 
+import re
+import pandas as pd 
 
 tweets_file_path = "./tweet"
 def export_tweets(username):
@@ -33,13 +18,6 @@ def export_tweets(username):
     c.Format = "Username: {username} |  Date: {date} {time}"
     c.Output = tweets_file_path
     twint.run.Search(c)
-
-
-# In[ ]:
-
-
-import re
-import pandas as pd 
 
 
 def remove_emoji(tweet):
@@ -68,9 +46,6 @@ def remove_emoji(tweet):
 
     return emoji_pattern.sub(r'', tweet)
 
-
-
-
 def clean_tweet(tweet):
 
     tweet = re.sub(r'(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})\S*', '', tweet)
@@ -85,9 +60,6 @@ def clean_tweet(tweet):
     return tweet
 
 
-# In[ ]:
-
-
 def scraping_tweets(username):
     export_tweets(username)
 
@@ -98,11 +70,6 @@ def scraping_tweets(username):
         for i in range(len(data)):
             tw.write(data[i])
             tw.write("\n")
-    
-
-
-# In[ ]:
-
 
 twitter_account = [
                    "Khamenei_fa",
@@ -258,11 +225,6 @@ twitter_account = [
                    "mohsenmirdamadi",
             
 ]
-
-
-# In[ ]:
-
-
 
 for acc in twitter_account:
     scraping_tweets(acc)
