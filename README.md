@@ -1,2 +1,2 @@
 # Iranian-politicians-twitter-dataset-persian
-Iranian politicians twitter dataset persian(farsi)
+دیتاست کامل توییت های سیاسیون ایرانی در توییتر
