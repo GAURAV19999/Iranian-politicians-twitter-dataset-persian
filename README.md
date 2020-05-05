@@ -22,7 +22,7 @@ pip3 install twint
 [tweets txt file](https://drive.google.com/file/d/14xULAoQORZudUSzVnsW9060Mm3PNkHOL/view?usp=sharing).
 
 
-**Twitter's API:**
+**Twitter Scraping Tool:**
 ```bash
 https://github.com/twintproject/twint
 ```
