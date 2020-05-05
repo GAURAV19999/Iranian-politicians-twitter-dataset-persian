@@ -19,7 +19,6 @@ pip3 install twint
 **Dataset:**
 
 [tweets csv file](https://drive.google.com/file/d/1517ZtAaE9bEBQjgX3QFIF8Z7YE2KiqMl/view?usp=sharing).<br>
-<br>
 [tweets txt file](https://drive.google.com/file/d/14xULAoQORZudUSzVnsW9060Mm3PNkHOL/view?usp=sharing).
 
 <br>
